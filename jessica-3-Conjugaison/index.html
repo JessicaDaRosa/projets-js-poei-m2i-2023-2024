@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conjugaison</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="./script.js" defer></script>
 </head>
-<body>
-    <div id="entree">
-        <label for="verbe">Votre verbe</label>
-        <textarea id="verbe" ></textarea>
-        <select name="conjugaisons" id="conjugaisons-opt">
-            <option value="" disabled selected>--Quelle conjugaison--</option>
-            <option value="futur">Futur</option>
-            <option value="present">Present</option>
-            <option value="imparfait">Imparfait</option>
-        </select>
-        <button onclick="conjuguer()">Conjuguer</button>
+<body class="container">
+    <h1 class="mx-auto">Conjuguer les verbes du premier groupe</h1>
+    <div class="mx-auto" id="entree">
+        <div class="mb-3">
+            <label for="verbe" class="form-label">Verbe:</label>
+            <textarea class="form-control" id="verbe"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="conjugaisons-opt" class="form-label">Quelle conjugaison:</label>
+            <select class="form-select" name="conjugaisons" id="conjugaisons-opt">
+                <option value="" disabled selected>--Conjugaisons--</option>
+                <option value="futur">Futur</option>
+                <option value="present">Present</option>
+                <option value="imparfait">Imparfait</option>
+            </select>
+        </div>
+        <button onclick="conjuguer()" class="btn btn-dark">Conjuguer</button>
     </div>
     
-    <div id="conjugaisons">
-
-    </div>
+    <div class="mx-auto" id="conjugaisons"></div>
     
 </body>
 </html>
