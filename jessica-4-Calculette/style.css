@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 .calculette{
     display: flex;
     align-items: center;
@@ -29,4 +28,8 @@ button{
 .full-width-button {
     width: 100%;
     height: 50px; /* Ajoutez un padding si nécessaire */
+    margin-top: 1px;
+}
+.w-10{
+    width: 12%;
 }
